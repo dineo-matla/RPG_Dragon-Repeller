@@ -1,0 +1,1 @@
+In the role playing game, users will be able to track their stats, buy weapons, and fight monsters. 
