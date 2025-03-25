@@ -36,6 +36,10 @@ function update(location) {
   text.innerText = location.text;
 }
 
+function goCave() {
+  update(locations[2]);
+}
+
 const weapons = [
   {
     name: "stick",
@@ -122,17 +126,14 @@ function sellWeapon() {
   }
 }
 
-function goCave() {
-  update(locations[2]);
-}
-
 function fightDragon() {
   console.log("Fighting dragon.");
 }
 
+function fightSlime() {}
+function fightBeast() {}
+
+//Initialize buttons
 button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
-
-function fightSlime() {}
-function fightBeast() {}
