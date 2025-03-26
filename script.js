@@ -4,7 +4,7 @@ let gold = 50;
 let currentWeaponIndex = 0;
 let fighting;
 let monsterHealth;
-let inventory = ["stick"];
+let inventory = ["Quarterstaff"];
 
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
@@ -43,33 +43,33 @@ function goCave() {
 
 const weapons = [
   {
-    name: "stick",
+    name: "Quarterstaff",
     power: 5,
   },
   {
-    name: "dagger",
+    name: "Short sword",
     power: 30,
   },
   {
-    name: "claw hammer",
+    name: "War mace",
     power: 50,
   },
   {
-    name: "sword",
+    name: "Longsword",
     power: 100,
   },
 ];
 
 const monsters = [
   {
-    name: "slime",
+    name: "Acidic blob",
     level: 2,
     health: 15,
   },
 
-  { name: "fanged beast", level: 8, health: 60 },
+  { name: "Giant werewolf", level: 8, health: 60 },
   {
-    name: "dragon",
+    name: "Tharros the Dragon",
     level: 20,
     health: 300,
   },
@@ -78,59 +78,51 @@ const monsters = [
 const locations = [
   {
     name: "town square",
-    "button text": ["Go to store", "Go to cave", "Fight dragon"],
+    "button text": ["Visit Store", "Explore Cave", "Battle Dragon"],
     "button functions": [goStore, goCave, fightDragon],
     text: 'You are in the town square. You see a sign that says "Store".',
   },
   {
     name: "store",
-    "button text": [
-      "Buy 10 health (10 gold)",
-      "Buy weapon (30 gold)",
-      "Go to town square",
-    ],
+    "button text": ["10 Health: 10 Gold", "Weapon: 30 Gold", "Town Square"],
     "button functions": [buyHealth, buyWeapon, goTown],
     text: "You enter the store.",
   },
   {
     name: "cave",
-    "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
-    "button functions": [fightSlime, fightBeast, goTown],
+    "button text": ["Fight acidic blob", "Fight giant werewolf", "Town Square"],
+    "button functions": [fightAcidicBlob, fightGiantWerewolf, goTown],
     text: "You enter the cave. You see some monsters.",
   },
   {
     name: "fight",
-    "button text": ["Attack", "Dodge", "Run"],
+    "button text": ["Attack", "Dodge", "Flee"],
     "button functions": [attack, dodge, goTown],
     text: "You are fighting a monster.",
   },
   {
     name: "kill monster",
-    "button text": [
-      "Go to town square",
-      "Go to town square",
-      "Go to town square",
-    ],
+    "button text": ["Town Square", "Town Square", "Town Square"],
     "button functions": [goTown, goTown, easterEgg],
     text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.',
   },
   {
     name: "lose",
-    "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
+    "button text": ["REPLAY", "REPLAY", "REPLAY"],
     "button functions": [restart, restart, restart],
-    text: "You die. &#x2620;",
+    text: "Game Over: Hero Defeated. &#x2620;",
   },
   {
     name: "win",
-    "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
+    "button text": ["REPLAY", "REPLAY", "REPLAY"],
     "button functions": [restart, restart, restart],
-    text: "You defeat the dragon! YOU WIN THE GAME! &#x1F389;",
+    text: "VICTORY! Tharros, the Dreaded Dragon, Falls Before You! Congratulations, Hero, You've Won the Game! &#x1F389;",
   },
   {
     name: "easter egg",
-    "button text": ["2", "8", "Go to town square?"],
+    "button text": ["2", "8", "Town Square"],
     "button functions": [pickTwo, pickEight, goTown],
-    text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!",
+    text: "You find a secret quest. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!",
   },
 ];
 
@@ -184,11 +176,11 @@ function goFight() {
   monsterHealthText.innerText = monsterHealth;
 }
 
-function fightSlime() {
+function fightAcidicBlob() {
   fighting = 0;
   goFight();
 }
-function fightBeast() {
+function fightGiantWerewolf() {
   fighting = 1;
   goFight();
 }
