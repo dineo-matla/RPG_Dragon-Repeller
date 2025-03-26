@@ -1,27 +1,33 @@
 body {
-  background-color: #0a0a23;
+  background-image: url(Media/12169928-a02a-4a7d-8a71-54b27e5bd563.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #text {
-  background-color: #0a0a23;
+  background-color: #142e1f;
   color: #ffffff;
   padding: 10px;
 }
 
 #game {
-  max-width: 500px;
-  max-height: 400px;
+  max-width: 950px;
+  max-height: 450px;
   background-color: #ffffff;
   color: #ffffff;
-  margin: 30px auto 0px;
-  padding: 10px;
+  margin: 50px auto 0px;
+  padding: 15px;
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 #controls,
 #stats {
-  border: 1px solid #0a0a23;
+  border: 2px solid #142e1f;
   padding: 5px;
   color: #0a0a23;
+  text-align: center;
 }
 
 #monsterStats {
@@ -37,9 +43,14 @@ body {
 }
 
 button {
+  border: 3px solid #e69b2bc7;
+  background-color: #f7d139;
+  padding: 10px 20px;
+  font-size: 16px;
   cursor: pointer;
-  color: #0a0a23;
-  background-color: #feac32;
-  background-image: linear-gradient(#fecc4c, #ffac33);
-  border: 3px solid #feac32;
+  font-family: "Press Start 2P", cursive;
+}
+
+button:hover {
+  background-color: #ffaa00;
 }
