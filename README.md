@@ -64,7 +64,8 @@ This is a simple role-playing game (RPG) built using JavaScript, HTML, and CSS. 
 
 ## How to Play
 
-1. Open **live site:**[https://tharros-dragon-rpg.netlify.app/]tructions to explore, buy weapons, and fight monsters.
-2. Try to increase your stats and defeat stronger enemies!
+1. Open **live site:**[https://tharros-dragon-rpg.netlify.app/] in your browser.
+2. Follow on-screen instructions to explore, buy weapons, and fight monsters.
+3. Try to increase your stats and defeat stronger enemies!
 
 Enjoy the adventure!
